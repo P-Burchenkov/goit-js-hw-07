@@ -26,12 +26,11 @@ function onImgClick(event) {
     return;
   }
   event.preventDefault();
-  const modal = new SimpleLightbox(`.gallery .gallery__link`, {
+  const modal = new SimpleLightbox(`.gallery a`, {
     captionsData: "alt",
     captionDelay: 250,
     scrollZoom: false,
   });
-    modal.open();
 }
 
 console.log(galleryItems);
