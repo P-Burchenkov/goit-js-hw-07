@@ -3,7 +3,6 @@ import {galleryItems} from "./gallery-items.js";
 
 const galleryListEl = document.querySelector(".gallery");
 
-
 galleryListEl.innerHTML = makeGallery(galleryItems);
 galleryListEl.addEventListener("click", onImgClick);
 
@@ -30,9 +29,9 @@ function onImgClick(event) {
   const modal = new SimpleLightbox(`.gallery .gallery__link`, {
     captionsData: "alt",
     captionDelay: 250,
+    scrollZoom: false,
   });
-  console.log(modal);
-  modal.open();
+    modal.open();
 }
 
 console.log(galleryItems);
